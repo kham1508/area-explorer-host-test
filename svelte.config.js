@@ -1,8 +1,9 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from "@sveltejs/adapter-static";
+// was "@sveltejs/adapter-auto"
 
-const dev = "production" === "development"
+const dev = "production" === "development";
 
-/** @type {import('@sveltejs/kit').Config} */
+/** @type {import(""@sveltejs/kit").Config} */
 const config = {
 	kit: {
 		adapter: adapter({
@@ -10,10 +11,12 @@ const config = {
 			assets: "docs"
 		}),
 		paths: {
-			base: dev ? " " : "/area-explorer-host-test",
+			// change below to your repo name
+			base: dev ? "" : "/area-explorer-host-test",
 		}
-		//,
-		//target: "#svelte"
+		// ,
+		// hydrate the <div id="svelte"> element in src/app.html
+		// target: "#svelte"
 	}
 };
 
